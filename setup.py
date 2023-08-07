@@ -31,7 +31,7 @@ def install():
     do(msg="tar and make install BCM2835",
         cmd='run_command("tar zxvf bcm2835-1.60.tar.gz && cd bcm2835-1.60/ && sudo ./configure && sudo make && sudo make check && sudo make install")')
     do(msg="install wiringpi",
-        cmd='run_command("sudo apt-get install wiringpi && cd /tmp && wget https://project-downloads.drogon.net/wiringpi-latest.deb && sudo dpkg -i wiringpi-latest.deb")')
+        cmd='run_command("sudo apt-get install wiringpi || cd /tmp && wget https://project-downloads.drogon.net/wiringpi-latest.deb && sudo dpkg -i wiringpi-latest.deb")')
     do(msg="apt-get update",
         cmd='run_command("sudo apt-get update")')
     do(msg="apt-get install python3-pip",
